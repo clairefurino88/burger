@@ -1,22 +1,16 @@
-//boilerplate code
 
 var mysql = require("mysql");
-var connection;
 
-//if (process.env.JAWSDB_URL) {
-  //connection = mysql.createConnection(process.env.JAWSDB_URL);
-//}
+var PORT = process.env.PORT || 3000;
 
-//else {
-//  var connection = mysql.createConnection({
- //  port: 3307,
- //  host: "localhost",
- //  user: "root",
- //  password: "root",
- //  database: "burgers_db"
- // });
-//}
-
+var connection = mysql.createConnection({
+    host: "localhost",
+    port: 3307,
+    user: "root",
+    password: "root",
+    database: "burger_db"
+  });
+  
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
