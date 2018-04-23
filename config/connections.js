@@ -10,7 +10,6 @@ else{
   connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  port: 3307,
   password: "root",
   database: "burgers_db"
 });
